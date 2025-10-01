@@ -1,0 +1,29 @@
+/* Existing styles */
+.resume-preview-container {
+    max-height: calc(100vh - 8rem); /* Adjust based on your header/footer height */
+}
+
+.resume-content {
+    /* Ensures the content inside scales correctly */
+    transform-origin: top left;
+}
+
+/* Hide elements during printing */
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+/* --- FIX FOR FULLSCREEN CENTERING --- */
+.resume-preview-container:fullscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6; /* bg-gray-100 */
+    padding: 2rem;
+    overflow-y: auto; /* Add scroll if needed on small screens */
+}
+
+    
