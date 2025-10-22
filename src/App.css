@@ -1,0 +1,36 @@
+/* Remove old resume-specific styles */
+.resume-preview-container:fullscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Add custom scrollbar styles for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937; /* gray-800 */
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563; /* gray-600 */
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280; /* gray-500 */
+}
+/* Make sure everything in the preview can wrap if a component forgets classes */
+.resume-content, .resume-content * {
+  overflow-wrap: anywhere;
+  word-break: break-word;   /* Safari fallback */
+}
+
+
